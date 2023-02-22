@@ -8,7 +8,7 @@ export default function AppLayout({ children }: AppLayoutProps) {
   return (
     <>
       <AppHeader />
-      {children}
+      <main>{children}</main>
     </>
   );
 }
