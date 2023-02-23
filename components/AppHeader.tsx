@@ -18,7 +18,7 @@ import LinkIcon from "./LinkIcon";
 export default function AppHeader() {
   const [navbarMenuOpen, setNavbarMenuOpen] = useState(false);
   return (
-    <header className="h-14 overflow-visible shadow md:h-[82px]">
+    <header className="relative z-10 h-14 overflow-visible shadow md:h-[82px]">
       <nav className="relative flex h-full items-center justify-between md:container md:gap-4 lg:gap-12">
         <Link
           href="/"
@@ -38,7 +38,7 @@ export default function AppHeader() {
         >
           <span
             className={classNames(
-              "ease h-1 w-6 transform rounded-full bg-pink-400 transition-transform duration-300 ease-in-out",
+              "ease h-1 w-6 transform rounded-full bg-primary transition-transform duration-300 ease-in-out",
               {
                 "translate-y-2 rotate-45 opacity-80 group-hover:opacity-100":
                   navbarMenuOpen,
@@ -48,7 +48,7 @@ export default function AppHeader() {
           ></span>
           <span
             className={classNames(
-              "ease h-1 w-6 transform rounded-full bg-pink-400 transition-transform duration-300 ease-in-out",
+              "ease h-1 w-6 transform rounded-full bg-primary transition-transform duration-300 ease-in-out",
               {
                 "opacity-0": navbarMenuOpen,
                 "opacity-80 group-hover:opacity-100": !navbarMenuOpen,
@@ -57,7 +57,7 @@ export default function AppHeader() {
           ></span>
           <span
             className={classNames(
-              "ease h-1 w-6 transform rounded-full bg-pink-400 transition-transform duration-300 ease-in-out",
+              "ease h-1 w-6 transform rounded-full bg-primary transition-transform duration-300 ease-in-out",
               {
                 "-translate-y-2 -rotate-45 opacity-80 group-hover:opacity-100":
                   navbarMenuOpen,
@@ -92,7 +92,7 @@ export default function AppHeader() {
             </li>
           </ul>
 
-          <ul className="flex items-center justify-between gap-1 p-4 text-pink-400 md:justify-self-end md:p-0">
+          <ul className="flex items-center justify-between gap-1 p-4 text-primary md:justify-self-end md:p-0">
             <li className="flex items-center justify-center">
               <ul className="flex gap-4">
                 <li className="flex items-center justify-center">
@@ -131,7 +131,7 @@ export default function AppHeader() {
             </li>
             <li className="ml-6 flex">
               <Link
-                className="rounded-full bg-pink-400 p-3 text-white transition-transform ease-in-out hover:scale-105 hover:shadow-lg"
+                className="rounded-full bg-primary p-3 text-white transition-transform ease-in-out hover:scale-105 hover:shadow-lg"
                 href="/facebook-messenger"
               >
                 <FontAwesomeIcon

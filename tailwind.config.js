@@ -16,7 +16,7 @@ module.exports = {
         'sm': '640px',
         // => @media (min-width: 640px) { ... }
 
-        'md': '768px',
+        'md': '798px',
         // => @media (min-width: 768px) { ... }
 
         'lg': '1024px',
@@ -30,6 +30,10 @@ module.exports = {
       },
       container: {
         center: true
+      },
+      colors: {
+        primary: '#F871A6',
+        secondary: '#DCA975',
       }
     },
   },

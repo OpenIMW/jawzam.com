@@ -11,10 +11,17 @@ const inter = Inter({
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
-      <style jsx global>
+      <style
+        jsx
+        global
+      >
         {`
           :root {
             --inter-font: ${inter.style.fontFamily};
+          }
+          ::selection {
+            color: white;
+            background: #f871a6;
           }
         `}
       </style>
