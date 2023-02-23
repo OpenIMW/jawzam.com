@@ -18,18 +18,18 @@ import LinkIcon from "./LinkIcon";
 export default function AppHeader() {
   const [navbarMenuOpen, setNavbarMenuOpen] = useState(false);
   return (
-    <header className="relative z-10 h-14 overflow-visible shadow md:h-[82px]">
+    <header className="fixed top-0 z-20 h-14 w-full overflow-visible bg-white/80 shadow backdrop-blur-md md:h-[82px]">
       <nav className="relative flex h-full items-center justify-between md:container md:gap-4 lg:gap-12">
         <Link
           href="/"
-          className="relative z-10 ml-4 self-start md:ml-0"
+          className="relative ml-4 md:ml-0"
         >
           <Image
-            className="h-18 flex w-20 justify-center md:h-28 md:w-[126px]"
-            src="/jawzam-logo.svg"
-            width={126}
-            height={113}
+            className="h-auto w-40"
+            src="/jawzam-text-logo.svg"
             alt="Jawzam.com"
+            width={300}
+            height={150}
           />
         </Link>
         <button
@@ -71,7 +71,7 @@ export default function AppHeader() {
         </button>
         <div
           className={classNames(
-            "absolute top-14 flex h-[calc(100vh_-_3.5rem)] w-full grow transform flex-col justify-between self-center bg-white transition-transform duration-300 md:static md:h-full md:w-auto md:translate-x-0 md:flex-row",
+            "absolute top-14 flex h-[calc(100vh_-_3.5rem)] w-full grow transform flex-col justify-between self-center bg-white transition-transform duration-300 md:static md:h-full md:w-auto md:translate-x-0 md:flex-row md:bg-transparent",
             {
               "translate-x-0 ease-in": navbarMenuOpen,
               " -translate-x-[130%] ease-out": !navbarMenuOpen,

@@ -51,7 +51,7 @@ export default function Home({
         />
       </Head>
 
-      <main>
+      <main className="mt-20">
         <HomeHero />
         <section>
           <div className="bg-primary">
