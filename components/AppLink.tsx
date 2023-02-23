@@ -16,7 +16,7 @@ export default function AppLink({
     <Link
       {...props}
       className={classNames(
-        "rounded-md border-primary bg-amber-200/5 p-4 text-base font-black text-primary after:block after:w-full after:scale-y-0 after:scale-x-0 after:rounded-lg after:transition-all after:duration-300 after:ease-in-out hover:after:h-1 hover:after:origin-center hover:after:scale-y-100 hover:after:scale-x-95 hover:after:bg-primary",
+        "rounded-md border-primary p-4 text-base font-black text-primary after:block after:w-full after:scale-y-0 after:scale-x-0 after:rounded-lg after:transition-all after:duration-300 after:ease-in-out hover:after:h-1 hover:after:origin-center hover:after:scale-y-100 hover:after:scale-x-95 hover:after:bg-primary",
         className
       )}
     >
