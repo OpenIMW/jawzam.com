@@ -1,3 +1,4 @@
+import AppFooter from "./AppFooter";
 import AppHeader from "./AppHeader";
 
 interface AppLayoutProps {
@@ -9,6 +10,7 @@ export default function AppLayout({ children }: AppLayoutProps) {
     <>
       <AppHeader />
       {children}
+      <AppFooter />
     </>
   );
 }
