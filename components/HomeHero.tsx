@@ -9,11 +9,10 @@ export type HomeHeroProps = {
 };
 
 export default function HomeHero({ bgImage, catchPhrase }: HomeHeroProps) {
-  const bgImageUrl = bgImage ? sanityImageBuilder.image(bgImage).url() : "";
   return (
     <section
       style={{
-        backgroundImage: `url(${bgImageUrl})`,
+        backgroundImage: `url(${sanityImageBuilder.image(bgImage).url()})`,
       }}
       className={`h-[calc(100vh_-_5rem)]`}
     >
