@@ -1,33 +1,18 @@
-import AppLayout from "@/components/AppLayout";
 import "@/styles/globals.css";
-import { Inter } from "@next/font/google";
+import { NextPage } from "next";
 import type { AppProps } from "next/app";
+import { ReactElement, ReactNode } from "react";
 
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--inter-font",
-});
+export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
+  getLayout?: (page: ReactElement) => ReactNode;
+};
 
-export default function App({ Component, pageProps }: AppProps) {
-  return (
-    <>
-      <style
-        jsx
-        global
-      >
-        {`
-          :root {
-            --inter-font: ${inter.style.fontFamily};
-          }
-          ::selection {
-            color: white;
-            background: #f871a6;
-          }
-        `}
-      </style>
-      <AppLayout>
-        <Component {...pageProps} />
-      </AppLayout>
-    </>
-  );
+type AppPropsWithLayout = AppProps & {
+  Component: NextPageWithLayout;
+};
+
+export default function App({ Component, pageProps }: AppPropsWithLayout) {
+  const getLayout = Component.getLayout ?? ((page) => page);
+
+  return getLayout(<Component {...pageProps} />);
 }

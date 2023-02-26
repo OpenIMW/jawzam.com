@@ -17,20 +17,50 @@ import {
   faWhatsapp,
 } from "@fortawesome/free-brands-svg-icons";
 import SubscribeForm from "@/components/SubscribeForm";
+import { NextPageWithLayout } from "./_app";
+import { ReactElement } from "react";
+import AppLayout from "@/components/AppLayout";
+import { fetchHomePage } from "@/sanity/client";
+import { SanityDocument } from "sanity";
+import { SanityImageSource } from "@sanity/image-url/lib/types/types";
+import FeatureSection, { FeatureItem } from "@/components/FeatureSection";
+import { PreviewSuspense } from "next-sanity/preview";
+import PreviewHomeHero from "@/components/preview/PreviewHomeHero";
 
 const inter = Inter({ subsets: ["latin"] });
 
-interface IHomeProps {
-  features: typeof features;
+interface IHomeProps extends SanityDocument {
+  /* features: typeof features;
   products: IProduct[];
-  featuredProduct: IProduct;
+  featuredProduct: IProduct; */
+  bgImage: SanityImageSource;
+  catchPhrase: string;
+  features: FeatureItem[];
 }
 
-export default function Home({
+export async function getStaticProps({ preview = false }) {
+  if (preview) {
+    return { props: { preview } };
+  }
+
+  const data = (await fetchHomePage()) as IHomeProps;
+
+  return {
+    props: {
+      preview,
+      ...data,
+    },
+  };
+}
+
+const HomePage: NextPageWithLayout<IHomeProps> = ({
+  preview,
+  bgImage,
+  catchPhrase,
   features,
-  products,
-  featuredProduct,
-}: IHomeProps) {
+  ...props
+}: IHomeProps) => {
+  console.log(bgImage);
   return (
     <>
       <Head>
@@ -52,33 +82,21 @@ export default function Home({
       </Head>
 
       <main className="mt-20">
-        <HomeHero />
-        <section>
-          <div className="bg-primary">
-            <div className="container grid grid-cols-1 gap-12 py-14 md:grid-cols-3 md:gap-6">
-              {features.map((f) => (
-                <Feature
-                  key={f.title}
-                  src={f.icon}
-                  title={f.title}
-                  description={f.description}
-                  alt={f.title}
-                  width={230}
-                  height={230}
-                />
-              ))}
-            </div>
-          </div>
-          <Image
-            className="-mt-1 w-screen"
-            src="/features-waves-bg.svg"
-            width={1440}
-            height={145}
-            alt=""
-          />
-        </section>
+        {preview ? (
+          <PreviewSuspense fallback="Loading...">
+            <PreviewHomeHero />
+          </PreviewSuspense>
+        ) : (
+          <>
+            <HomeHero
+              bgImage={bgImage}
+              catchPhrase={catchPhrase}
+            />
+            <FeatureSection features={features} />
+          </>
+        )}
         <section className="container py-16">
-          <div className="grid gap-2 sm:grid-cols-2 md:grid-cols-4">
+          {/* <div className="grid gap-2 sm:grid-cols-2 md:grid-cols-4">
             {products.map((p) => (
               <ProductCard
                 key={p.id}
@@ -89,7 +107,7 @@ export default function Home({
           <FeaturedProduct
             className="mt-24 shadow-2xl shadow-primary/25"
             {...featuredProduct}
-          />
+          /> */}
         </section>
         <section className="min-h-screen bg-[url(/event-bg.svg)] bg-contain bg-bottom bg-no-repeat md:h-screen md:bg-center">
           <div className="container grid h-full items-center md:grid-cols-2">
@@ -189,14 +207,10 @@ export default function Home({
       </main>
     </>
   );
-}
+};
 
-export function getStaticProps() {
-  return {
-    props: {
-      features,
-      products: products.filter((p) => !p.featured),
-      featuredProduct: products.find((p) => p.featured),
-    },
-  };
-}
+HomePage.getLayout = function (page: ReactElement) {
+  return <AppLayout>{page}</AppLayout>;
+};
+
+export default HomePage;

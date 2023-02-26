@@ -1,17 +1,17 @@
 import classNames from "classnames";
 import Image, { ImageProps, StaticImageData } from "next/image";
+import { FeatureItem } from "./FeatureSection";
+import sanityImageBuilder from "@/sanity/utils/sanityImageBuilder";
 
-interface IFeatureProps extends ImageProps {
-  title: string;
-  description: string;
+interface IFeatureProps extends FeatureItem {
   className?: string;
 }
 
 export default function Feature({
+  icon,
   title,
   description,
   className,
-  alt,
   ...props
 }: IFeatureProps) {
   return (
@@ -23,7 +23,10 @@ export default function Feature({
     >
       <Image
         className="h-56 w-56 max-w-full"
-        alt={alt ?? title}
+        src={sanityImageBuilder.image(icon).width(200).height(200).url()}
+        width={200}
+        height={200}
+        alt={title}
         {...props}
       />
       <div className="flex flex-col gap-2 px-4 sm:px-12 md:px-16">
