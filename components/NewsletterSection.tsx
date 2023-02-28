@@ -8,7 +8,7 @@ export type NewsletterSectionProps = {
 
 export default function NewsletterSection(props: NewsletterSectionProps) {
   return (
-    <section className="relative bg-primary">
+    <section className="relative bg-secondary">
       <Image
         className="absolute -top-1 w-full"
         src="/subscribe-waves-bg-top.svg"
@@ -25,7 +25,7 @@ export default function NewsletterSection(props: NewsletterSectionProps) {
             alt="S'abonner aux newsletters de Jawzam.com"
           />
         </div>
-        <div className="flex flex-col gap-4 px-4 text-white md:px-12">
+        <div className="flex flex-col gap-4 px-4 text-neutral-900 md:px-12">
           <h2 className="text-3xl font-bold">{props.newsletterBannerTitle}</h2>
           <p>{props.newsletterBannerSentence}</p>
           <div className="my-4">

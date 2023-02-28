@@ -24,9 +24,11 @@ export default function ProductCard({
         width={422}
         alt={name}
       />
-      <div className="z-10 -mt-0.5 flex h-full w-full flex-col items-center gap-4 border-x border-b border-primary/10 bg-white px-4 py-6 text-center">
-        <h2 className="text-2xl font-bold text-neutral-600">{name}</h2>
-        <p className="flex-grow text-gray-500">{description}</p>
+      <div className="z-10 -mt-0.5 flex h-full w-full flex-col items-center gap-4 border-x border-b border-primary/20 bg-white px-4 py-6 text-center">
+        <h2 className="text-2xl font-bold text-gray-600">{name}</h2>
+        {description && (
+          <p className="flex-grow text-gray-500">{description}</p>
+        )}
         <p className="rounded-md bg-amber-200/5 py-2 px-4">
           <span className="text-3xl font-bold text-primary">{price}&euro;</span>
           &nbsp;
@@ -37,7 +39,7 @@ export default function ProductCard({
             </i>
           </span>
         </p>
-        <button className="mt-6 w-full rounded-lg border-2 border-dashed border-primary bg-white py-2 px-4 font-bold uppercase text-primary">
+        <button className="mt-6 w-full rounded-lg border-2 border-dashed border-primary bg-secondary/40 py-2 px-4 font-bold uppercase text-gray-600 transition duration-300 ease-in-out hover:bg-secondary/60">
           Ajouter au panier
         </button>
       </div>

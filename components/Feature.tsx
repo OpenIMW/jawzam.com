@@ -17,7 +17,7 @@ export default function Feature({
   return (
     <div
       className={classNames(
-        "flex flex-col items-center gap-4 text-center text-white",
+        "flex flex-col items-center gap-4 text-center text-gray-900",
         className
       )}
     >

@@ -22,14 +22,14 @@ export default function AppHeader() {
       <nav className="relative flex h-full items-center justify-between md:container md:gap-4 lg:gap-12">
         <Link
           href="/"
-          className="relative ml-4 md:ml-0"
+          className="relative ml-4 flex h-full items-center md:ml-0"
         >
           <Image
-            className="h-auto w-40"
-            src="/jawzam-text-logo.svg"
+            className="h-full w-auto"
+            src="/logo.svg"
             alt="Jawzam.com"
-            width={300}
-            height={150}
+            width={717}
+            height={664}
           />
         </Link>
         <button

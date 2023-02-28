@@ -17,7 +17,7 @@ export default function FeaturedProduct({
   return (
     <div
       className={classNames(
-        "flex flex-col border border-dashed border-amber-300 bg-amber-200/5 sm:flex-row",
+        "flex flex-col border border-dashed border-primary bg-primary/10 sm:flex-row",
         className
       )}
     >
@@ -30,7 +30,7 @@ export default function FeaturedProduct({
         />
       </div>
       <div className="z-10 -mt-0.5 flex h-full flex-1 flex-col items-center gap-4 border-t border-primary/5 px-4 py-6 text-center sm:border-l md:px-16">
-        <h2 className="text-3xl font-black text-primary">{name}</h2>
+        <h2 className="text-3xl font-black text-gray-700">{name}</h2>
         <p className="flex-grow text-gray-500">{description}</p>
         <p className="rounded-md bg-amber-200/5 py-2 px-4">
           <span className="text-3xl font-bold text-primary">{price}&euro;</span>
@@ -42,7 +42,7 @@ export default function FeaturedProduct({
             </i>
           </span>
         </p>
-        <button className="mt-6 w-full rounded-lg border-2 border-dashed border-primary bg-white py-2 px-4 font-bold uppercase text-primary">
+        <button className="mt-6 rounded-lg border-2 border-dashed border-primary bg-white px-12 py-2 font-bold uppercase text-primary transition duration-300 ease-in-out hover:bg-secondary/5 md:px-24">
           Ajouter au panier
         </button>
       </div>
