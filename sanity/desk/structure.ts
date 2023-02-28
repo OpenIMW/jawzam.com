@@ -26,7 +26,7 @@ export const structure = defineStructure(
                       S.view
                         .component(Iframe)
                         .options({
-                          URL: (doc: any) => {
+                          url: (doc: any) => {
                             if (doc?.slug?.current) {
                               return `http://localhost:3000/api/preview?slug=${doc.slug.current}`
                             }

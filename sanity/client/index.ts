@@ -12,18 +12,25 @@ const client = createClient({
   useCdn: false, // set to `true` to fetch from edge cache
 });
 
-export const fetchHomePage = async () => {
-  const query = groq`*[_type == "homePage" && _id == "homePage"]{
-    bgImage,
-    catchPhrase,
-    features[]->{
-      icon,
-      title,
-      description
-    }
-  }[0]`;
+export const homePageQuery = groq`*[_type == "homePage" && _id == "homePage"]{
+  bgImage,
+  catchPhrase,
+  buttonLabel,
+  features[]->{
+    icon,
+    title,
+    description
+  },
+  products[]->,
+  featuredProduct->,
+  specialOrderBannerTitle,
+  specialOrderBannerSentence,
+  newsletterBannerTitle,
+  newsletterBannerSentence
+}[0]`;
 
-  return await client.fetch(query);
+export const fetchHomePage = async () => {
+  return await client.fetch(homePageQuery);
 }
 
 export default client;

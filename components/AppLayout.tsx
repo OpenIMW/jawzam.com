@@ -27,6 +27,9 @@ export default function AppLayout({ children }: AppLayoutProps) {
             color: white;
             background: #f871a6;
           }
+          body {
+            background-color: white;
+          }
         `}
       </style>
       <Head>

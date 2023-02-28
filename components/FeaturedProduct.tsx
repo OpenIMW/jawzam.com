@@ -1,6 +1,7 @@
 import { IProduct } from "@/types/product";
 import classNames from "classnames";
 import Image from "next/image";
+import sanityImageBuilder from "@/sanity/utils/sanityImageBuilder";
 
 interface IFeaturedProduct extends IProduct {
   className?: string;
@@ -22,7 +23,7 @@ export default function FeaturedProduct({
     >
       <div className="flex flex-1 justify-center">
         <Image
-          src={image}
+          src={sanityImageBuilder.image(image).size(432, 242).url()}
           width={432}
           height={242}
           alt={name}

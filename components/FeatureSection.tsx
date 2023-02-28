@@ -18,12 +18,13 @@ export default function FeatureSection({ features }: FeatureSectionProps) {
     <section>
       <div className="bg-primary">
         <div className="container grid grid-cols-1 gap-12 py-14 md:grid-cols-3 md:gap-6">
-          {features.map((feature) => (
-            <Feature
-              key={feature.title}
-              {...feature}
-            />
-          ))}
+          {features.length > 0 &&
+            features.map((feature) => (
+              <Feature
+                key={feature.title}
+                {...feature}
+              />
+            ))}
         </div>
       </div>
       <Image

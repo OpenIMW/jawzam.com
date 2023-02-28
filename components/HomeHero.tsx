@@ -6,9 +6,14 @@ import sanityImageBuilder from "@/sanity/utils/sanityImageBuilder";
 export type HomeHeroProps = {
   bgImage: SanityImageSource;
   catchPhrase: string;
+  buttonLabel: string;
 };
 
-export default function HomeHero({ bgImage, catchPhrase }: HomeHeroProps) {
+export default function HomeHero({
+  bgImage,
+  catchPhrase,
+  buttonLabel,
+}: HomeHeroProps) {
   return (
     <section
       style={{
@@ -31,7 +36,7 @@ export default function HomeHero({ bgImage, catchPhrase }: HomeHeroProps) {
             {catchPhrase}
           </p>
           <button className="mt-6 flex items-center gap-2 rounded-md border-2 border-dashed border-primary bg-rose-300 py-3 px-6 text-lg font-black uppercase text-white shadow-lg shadow-pink-200">
-            <Cake strokeWidth={2} /> Commandez maintenant
+            <Cake strokeWidth={2} /> {buttonLabel}
           </button>
         </div>
       </div>

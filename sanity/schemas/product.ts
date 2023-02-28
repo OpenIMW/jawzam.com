@@ -38,12 +38,12 @@ const products = defineType({
       },
       validation: (rule) => rule.required(),
     }),
-    defineField({
+    /* defineField({
       name: 'featured',
       type: 'boolean',
       title: "S'agit-il du pack mixte ?",
       initialValue: false
-    }),
+    }), */
   ]
 })
 
