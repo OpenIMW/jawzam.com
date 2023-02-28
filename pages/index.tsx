@@ -1,22 +1,7 @@
 import Head from "next/head";
-import Image from "next/image";
 import { Inter } from "@next/font/google";
 import HomeHero from "@/components/HomeHero";
-import features from "@/data/features";
-import products from "@/data/products";
-import Feature from "@/components/Feature";
-import ProductCard from "@/components/ProductCard";
 import { IProduct } from "@/types/product";
-import FeaturedProduct from "@/components/FeaturedProduct";
-import Link from "next/link";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
-import LinkIcon from "@/components/LinkIcon";
-import {
-  faFacebookMessenger,
-  faWhatsapp,
-} from "@fortawesome/free-brands-svg-icons";
-import SubscribeForm from "@/components/SubscribeForm";
 import { NextPageWithLayout } from "./_app";
 import { ReactElement } from "react";
 import AppLayout from "@/components/AppLayout";
