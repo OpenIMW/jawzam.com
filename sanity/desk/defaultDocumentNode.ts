@@ -1,7 +1,7 @@
-// ./src/defaultDocumentNode.ts
-
 import { DefaultDocumentNodeResolver } from 'sanity/desk'
 import Iframe from 'sanity-plugin-iframe-pane'
+
+const baseURL = process.env.NEXT_PUBLIC_BASE_URL!
 
 export const defaultDocumentNode: DefaultDocumentNodeResolver = (S, { schemaType }) => {
   switch (schemaType) {
@@ -11,7 +11,7 @@ export const defaultDocumentNode: DefaultDocumentNodeResolver = (S, { schemaType
         S.view
           .component(Iframe)
           .options({
-            url: `http://localhost:3000/api/preview`,
+            url: `${baseURL}/api/preview`,
           })
           .title('Preview'),
       ])
