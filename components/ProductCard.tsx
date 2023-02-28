@@ -1,8 +1,8 @@
 import { IProduct } from "@/types/product";
 import Image from "next/image";
+import sanityImageBuilder from "@/sanity/utils/sanityImageBuilder";
 
 export default function ProductCard({
-  id,
   image,
   name,
   description,
@@ -12,19 +12,19 @@ export default function ProductCard({
     <div className="group relative flex flex-col items-center">
       <Image
         className="h-52 max-w-[80%] translate-y-[45%] transition-transform duration-200 ease-in-out group-hover:translate-y-0"
-        src={image}
-        height={190}
-        width={210}
+        src={sanityImageBuilder.image(image).size(200, 200).url()}
+        height={200}
+        width={200}
         alt={name}
       />
       <Image
-        className="z-10 w-full"
+        className="z-10 w-full max-w-full"
         src="/line-shadow.png"
         height={25}
         width={422}
         alt={name}
       />
-      <div className="z-10 -mt-0.5 flex h-full flex-col items-center gap-4 border-x border-b border-primary/10 bg-white px-4 py-6 text-center">
+      <div className="z-10 -mt-0.5 flex h-full w-full flex-col items-center gap-4 border-x border-b border-primary/10 bg-white px-4 py-6 text-center">
         <h2 className="text-2xl font-bold text-neutral-600">{name}</h2>
         <p className="flex-grow text-gray-500">{description}</p>
         <p className="rounded-md bg-amber-200/5 py-2 px-4">

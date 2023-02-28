@@ -1,8 +1,10 @@
-export interface IProduct {
-  id: string;
-  image: string;
+import { SanityDocument } from 'sanity';
+import { SanityImageSource } from '@sanity/image-url/lib/types/types';
+
+export interface IProduct extends SanityDocument {
+  image: SanityImageSource;
   name: string;
-  description?: string;
   price: number;
-  featured?: boolean;
+  description?: string;
+  slug: string;
 }

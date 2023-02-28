@@ -1,6 +1,12 @@
 import Head from "next/head";
 import AppFooter from "./AppFooter";
 import AppHeader from "./AppHeader";
+import { Inter } from "@next/font/google";
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--inter-font",
+});
 
 interface AppLayoutProps {
   children: React.ReactNode;
@@ -9,6 +15,23 @@ interface AppLayoutProps {
 export default function AppLayout({ children }: AppLayoutProps) {
   return (
     <>
+      <style
+        jsx
+        global
+      >
+        {`
+          :root {
+            --inter-font: ${inter.style.fontFamily};
+          }
+          ::selection {
+            color: white;
+            background: #f871a6;
+          }
+          body {
+            background-color: white;
+          }
+        `}
+      </style>
       <Head>
         <link
           rel="apple-touch-icon"
