@@ -12,7 +12,7 @@ export default function PreviewFeatureSection() {
       description
     }
   }[0]`;
-  const { features } = usePreview(token, query) as {
+  const { features } = usePreview(null, query) as {
     features: FeatureItem[];
   };
 

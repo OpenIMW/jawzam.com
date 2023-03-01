@@ -11,7 +11,7 @@ export default function PreviewNewsletterSection() {
     newsletterBannerTitle,
     newsletterBannerSentence
   }[0]`;
-  const data = usePreview(token, query) as NewsletterSectionProps;
+  const data = usePreview(null, query) as NewsletterSectionProps;
 
   return <>{data && <NewsletterSection {...data} />}</>;
 }

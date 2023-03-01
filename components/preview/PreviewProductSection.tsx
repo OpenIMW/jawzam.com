@@ -10,7 +10,7 @@ export default function PreviewProductSection() {
     products[]->,
     featuredProduct->
   }[0]`;
-  const data = usePreview(token, query) as {
+  const data = usePreview(null, query) as {
     products: IProduct[];
     featuredProduct: IProduct;
   };

@@ -10,7 +10,7 @@ export default function PreviewHomeHero() {
     catchPhrase,
     buttonLabel
   }[0]`;
-  const data = usePreview(token, query) as HomeHeroProps;
+  const data = usePreview(null, query) as HomeHeroProps;
 
   return <>{data && <HomeHero {...data} />}</>;
 }
