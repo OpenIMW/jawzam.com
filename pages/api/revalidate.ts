@@ -23,23 +23,24 @@ export default async function revalidate(req: NextApiRequest, res: NextApiRespon
   } */
 
   try {
-    const {
-      body: { type, slug },
-    } = JSON.parse(body)
+    const { type, slug } = JSON.parse(body)
 
     switch (type) {
       case "homePage":
         await res.revalidate(`${slug}`)
-        return res.json({
+        res.json({
           message: `Revalidated "${type}" with slug "${slug}"`
         });
+        return;
 
       default:
-        return res.json({ message: "No managed type" })
+        res.json({ message: "No managed type" });
+        return;
     }
 
   } catch (err) {
-    return res.status(500).send({ message: "Error revalidating", payload: body })
+    res.status(500).send({ message: "Error revalidating", payload: body, error: err });
+    return;
   }
 }
 
