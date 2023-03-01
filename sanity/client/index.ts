@@ -10,7 +10,6 @@ const client = createClient({
   projectId,
   dataset,
   apiVersion,
-  token,
   useCdn: false, // set to `true` to fetch from edge cache
 });
 
