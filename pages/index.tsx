@@ -18,6 +18,7 @@ import SpecialOrderSection from "@/components/SpecialOrderSection";
 import PreviewSpecialOrderSection from "@/components/preview/PreviewSpecialOrderSection";
 import NewsletterSection from "@/components/NewsletterSection";
 import PreviewNewsletterSection from "../components/preview/PreviewNewsletterSectionProps";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -91,6 +92,12 @@ const HomePage: NextPageWithLayout<IHomeProps> = ({
             <PreviewProductSection />
             <PreviewSpecialOrderSection />
             <PreviewNewsletterSection />
+            <Link
+              className="fixed bottom-0 right-0 z-40 rounded-tl-lg bg-gray-800 px-6 py-2 font-bold text-white"
+              href="/api/exit-preview"
+            >
+              Exit Preview
+            </Link>
           </PreviewSuspense>
         ) : (
           <>
