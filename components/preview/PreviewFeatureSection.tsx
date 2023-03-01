@@ -2,6 +2,8 @@ import { usePreview } from "@/sanity/utils/usePreview";
 import { groq } from "next-sanity";
 import FeatureSection, { FeatureItem } from "@/components/FeatureSection";
 
+const token = process.env.SANITY_API_TOKEN!;
+
 export default function PreviewFeatureSection() {
   const query = groq`*[_type=="homePage" && _id=="homePage"]{
     features[]->{
@@ -10,7 +12,7 @@ export default function PreviewFeatureSection() {
       description
     }
   }[0]`;
-  const { features } = usePreview("home-features", query) as {
+  const { features } = usePreview(token, query) as {
     features: FeatureItem[];
   };
 
