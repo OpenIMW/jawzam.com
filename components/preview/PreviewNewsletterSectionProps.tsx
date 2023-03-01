@@ -4,12 +4,14 @@ import NewsletterSection, {
   NewsletterSectionProps,
 } from "@/components/NewsletterSection";
 
+const token = process.env.SANITY_API_TOKEN!;
+
 export default function PreviewNewsletterSection() {
   const query = groq`*[_type=="homePage" && _id=="homePage"]{
     newsletterBannerTitle,
     newsletterBannerSentence
   }[0]`;
-  const data = usePreview("home-newsletter", query) as NewsletterSectionProps;
+  const data = usePreview(null, query) as NewsletterSectionProps;
 
   return <>{data && <NewsletterSection {...data} />}</>;
 }

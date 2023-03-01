@@ -1,8 +1,6 @@
 import defineStructure from '@/sanity/utils/defineStructure';
 import Iframe from 'sanity-plugin-iframe-pane'
 
-const baseURL = process.env.NEXT_PUBLIC_BASE_URL!
-
 const hiddenItemsIds = ['homePage'];
 
 export const structure = defineStructure(
@@ -29,10 +27,10 @@ export const structure = defineStructure(
                         .options({
                           url: (doc: any) => {
                             if (doc?.slug?.current) {
-                              return `${baseURL}/api/preview?slug=${doc.slug.current}`
+                              return `${window.location.origin}/api/preview?slug=${doc.slug.current}`
                             }
 
-                            return `${baseURL}/api/preview`
+                            return `${window.location.origin}/api/preview`
                           }
                         })
                         .title('Preview'),
