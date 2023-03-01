@@ -27,10 +27,10 @@ export const structure = defineStructure(
                         .options({
                           url: (doc: any) => {
                             if (doc?.slug?.current) {
-                              return `${window.location.host}/api/preview?slug=${doc.slug.current}`
+                              return `${window.location.origin}/api/preview?slug=${doc.slug.current}`
                             }
 
-                            return `${window.location.host}/api/preview`
+                            return `${window.location.origin}/api/preview`
                           }
                         })
                         .title('Preview'),
