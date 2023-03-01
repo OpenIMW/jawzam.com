@@ -10,7 +10,7 @@ export default function PreviewSpecialOrderSection() {
     specialOrderBannerSentence
   }[0]`;
   const { specialOrderBannerSentence, specialOrderBannerTitle } = usePreview(
-    token,
+    null,
     query
   );
 
