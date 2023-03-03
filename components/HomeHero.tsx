@@ -19,7 +19,7 @@ export default function HomeHero({
       style={{
         backgroundImage: `url(${sanityImageBuilder.image(bgImage).url()})`,
       }}
-      className={`h-[calc(100vh_-_5rem)]`}
+      className={`h-[calc(100vh_-_5rem)] bg-cover bg-no-repeat`}
     >
       <div className="container grid h-full md:grid-cols-2">
         <div className="flex h-full flex-col items-center justify-center gap-4 py-8 px-2 md:px-6">
