@@ -64,10 +64,10 @@ export default function AppFooter() {
         </ul>
       </div>
       <div className="flex flex-col gap-2 divide-y">
-        <ul className="flex grow list-disc flex-col justify-center text-center md:flex-row">
+        <ul className="flex grow list-disc flex-col justify-center text-center text-secondary md:flex-row">
           <li className="flex items-center justify-center">
             <Link
-              className="rounded-md p-4 text-base font-black text-primary transition-transform duration-300 ease-in-out hover:scale-110"
+              className="rounded-md p-4 text-base font-black transition-transform duration-300 ease-in-out hover:scale-110"
               href="/commandez-maintenant"
             >
               Commandez
@@ -75,7 +75,7 @@ export default function AppFooter() {
           </li>
           <li className="flex items-center justify-center">
             <Link
-              className="rounded-md p-4 text-base font-black text-primary transition-transform duration-300 ease-in-out hover:scale-110"
+              className="rounded-md p-4 text-base font-black transition-transform duration-300 ease-in-out hover:scale-110"
               href="/suivez-votre-maintenant"
             >
               Livraison
@@ -83,7 +83,7 @@ export default function AppFooter() {
           </li>
           <li className="flex items-center justify-center">
             <Link
-              className="rounded-md p-4 text-base font-black text-primary transition-transform duration-300 ease-in-out hover:scale-110"
+              className="rounded-md p-4 text-base font-black transition-transform duration-300 ease-in-out hover:scale-110"
               href="/suivez-votre-maintenant"
             >
               Suivez votre commande
@@ -91,7 +91,7 @@ export default function AppFooter() {
           </li>
           <li className="flex items-center justify-center">
             <Link
-              className="rounded-md p-4 text-base font-black text-primary transition-transform duration-300 ease-in-out hover:scale-110"
+              className="rounded-md p-4 text-base font-black transition-transform duration-300 ease-in-out hover:scale-110"
               href="/légals"
             >
               Légals

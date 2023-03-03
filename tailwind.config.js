@@ -33,7 +33,7 @@ module.exports = {
       },
       colors: {
         primary: '#d9b01a', //'#F871A6',
-        secondary: '#EAD481',
+        secondary: '#402d35',
       }
     },
   },

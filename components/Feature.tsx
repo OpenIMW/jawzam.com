@@ -17,7 +17,7 @@ export default function Feature({
   return (
     <div
       className={classNames(
-        "flex flex-col items-center gap-4 text-center text-gray-900",
+        "flex flex-col items-center gap-4 text-center text-white",
         className
       )}
     >
@@ -30,8 +30,8 @@ export default function Feature({
         {...props}
       />
       <div className="flex flex-col gap-2 px-4 sm:px-12 md:px-16">
-        <h2 className="text-2xl font-bold">{title}</h2>
-        <p className="font-medium">{description}</p>
+        <h2 className="text-2xl font-bold text-primary">{title}</h2>
+        <p className="text-gray-200">{description}</p>
       </div>
     </div>
   );

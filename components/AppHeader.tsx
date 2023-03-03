@@ -92,7 +92,7 @@ export default function AppHeader() {
             </li>
           </ul>
 
-          <ul className="flex items-center justify-between gap-1 p-4 text-primary md:justify-self-end md:p-0">
+          <ul className="flex items-center justify-between gap-1 p-4 text-secondary md:justify-self-end md:p-0">
             <li className="flex items-center justify-center">
               <ul className="flex gap-4">
                 <li className="flex items-center justify-center">
@@ -131,7 +131,7 @@ export default function AppHeader() {
             </li>
             <li className="ml-6 flex">
               <Link
-                className="rounded-full bg-primary p-3 text-white transition-transform ease-in-out hover:scale-105 hover:shadow-lg"
+                className="rounded-full bg-secondary p-3 text-white transition-transform ease-in-out hover:scale-105 hover:shadow-lg"
                 href="/facebook-messenger"
               >
                 <FontAwesomeIcon

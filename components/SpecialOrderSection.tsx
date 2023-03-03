@@ -21,9 +21,9 @@ export default function SpecialOrderSection({
     <section className="min-h-screen bg-[url(/event-bg.svg)] bg-contain bg-bottom bg-no-repeat md:h-screen md:bg-center">
       <div className="container grid h-full items-center md:grid-cols-2">
         <div className="flex flex-col items-center gap-4 px-6 pt-28 text-center md:px-20">
-          <h2 className="text-3xl font-bold text-neutral-600">{headline}</h2>
-          <p className="text-gray-500">{subtitle}</p>
-          <div className="my-12 flex w-full flex-wrap items-center justify-around gap-4 text-primary">
+          <h2 className="text-3xl font-bold text-secondary">{headline}</h2>
+          <p className="text-secondary/80">{subtitle}</p>
+          <div className="my-12 flex w-full flex-wrap items-center justify-around gap-4 text-secondary">
             <Link
               href="tel:+33  6 3457 3653"
               className="block text-xl font-black transition-transform ease-in-out hover:scale-110"

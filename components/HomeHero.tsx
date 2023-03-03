@@ -36,7 +36,7 @@ export default function HomeHero({
             <span className="font-bold text-secondary">souvenirs</span>. */}
             {catchPhrase}
           </p>
-          <button className="mt-6 flex items-center gap-2 rounded-md bg-neutral-900 py-3 px-6 text-lg font-black uppercase text-primary shadow-lg shadow-amber-100 transition-transform duration-300 ease-in-out hover:scale-105">
+          <button className="mt-6 flex items-center gap-2 rounded-md bg-primary py-3 px-6 text-lg font-black uppercase text-white shadow-lg shadow-amber-100 transition-transform duration-300 ease-in-out hover:scale-105">
             <Cake strokeWidth={2} /> {buttonLabel}
           </button>
         </div>

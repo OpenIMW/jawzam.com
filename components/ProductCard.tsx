@@ -24,22 +24,24 @@ export default function ProductCard({
         width={422}
         alt={name}
       />
-      <div className="z-10 -mt-0.5 flex h-full w-full flex-col items-center gap-4 border-x border-b border-primary/20 bg-white px-4 py-6 text-center">
-        <h2 className="text-2xl font-bold text-gray-600">{name}</h2>
+      <div className="z-10 -mt-0.5 flex h-full w-full flex-col items-center gap-4 border-x border-b border-primary/20 bg-neutral-50 px-4 py-6 text-center">
+        <h2 className="text-2xl font-bold text-secondary">{name}</h2>
         {description && (
-          <p className="flex-grow text-gray-500">{description}</p>
+          <p className="flex-grow text-secondary/80">{description}</p>
         )}
         <p className="rounded-md bg-amber-200/5 py-2 px-4">
-          <span className="text-3xl font-bold text-primary">{price}&euro;</span>
+          <span className="text-3xl font-bold text-secondary">
+            {price}&euro;
+          </span>
           &nbsp;
-          <span className="text-lg font-bold text-gray-600">
+          <span className="text-lg font-bold text-secondary">
             / Box{" "}
             <i className="text-sm font-normal text-gray-500">
               (12pieces ~ 1Kg)
             </i>
           </span>
         </p>
-        <button className="mt-6 w-full rounded-lg border-2 border-dashed border-primary bg-secondary/40 py-2 px-4 font-bold uppercase text-gray-600 transition duration-300 ease-in-out hover:bg-secondary/60">
+        <button className="mt-6 w-full rounded-lg border-2 border-dashed border-primary bg-white py-2 px-4 font-bold uppercase text-primary transition duration-300 ease-in-out hover:bg-primary hover:text-white">
           Ajouter au panier
         </button>
       </div>

@@ -26,13 +26,13 @@ export default function SubscribeForm() {
         <input
           type="search"
           id="default-search"
-          className="block w-full rounded-lg border-2 border-dashed border-primary bg-white/80 p-4 pl-10 text-sm text-gray-900 focus:border-primary focus:bg-white focus:ring-primary"
+          className="block w-full rounded-lg border-2 border-dashed border-primary bg-white/80 p-4 pl-10 text-sm text-gray-900 focus:border-primary focus:bg-white focus:ring-primary focus-visible:outline-dashed focus-visible:outline-primary"
           placeholder="email@example.com"
           required
         />
         <button
           type="submit"
-          className="absolute right-2.5 bottom-2.5 rounded-lg bg-secondary px-4 py-2 text-sm font-bold text-neutral-800 hover:bg-primary focus:outline-none focus:ring-4 focus:ring-secondary dark:bg-blue-600 dark:hover:bg-primary dark:focus:ring-blue-800 md:px-6"
+          className="absolute right-2.5 bottom-2.5 rounded-lg bg-primary/80 px-4 py-2 text-sm font-bold text-neutral-800 hover:bg-primary focus:outline-none focus:ring-4 focus:ring-secondary dark:hover:bg-primary md:px-6"
         >
           {"S'abonner"}
         </button>
