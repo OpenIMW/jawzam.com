@@ -57,7 +57,7 @@ export default function AppLayout({ children }: AppLayoutProps) {
         <link
           rel="mask-icon"
           href="/safari-pinned-tab.svg"
-          color="#f871a6"
+          color="#d9b01a"
         />
         <meta
           name="msapplication-TileColor"
