@@ -84,7 +84,7 @@ const HomePage: NextPageWithLayout<IHomeProps> = ({
         />
       </Head>
 
-      <main className="mt-20">
+      <main>
         {preview ? (
           <PreviewSuspense fallback="Loading...">
             <PreviewHomeHero />

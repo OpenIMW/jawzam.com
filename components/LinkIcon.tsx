@@ -25,7 +25,7 @@ export default function LinkIcon({
       {...props}
       className={classNames(
         className,
-        "transition-transform ease-in-out hover:scale-110"
+        "transition-transform ease-in-out hover:scale-110 hover:opacity-100"
       )}
     >
       <FontAwesomeIcon

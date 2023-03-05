@@ -32,9 +32,10 @@ module.exports = {
         center: true
       },
       colors: {
-        primary: '#d9b01a', //'#F871A6',
-        secondary: '#402d35',
-      }
+        primary: '#EFC227', //'#F871A6',
+        secondary: "#004B41",
+        accent: '#402d35',
+      },
     },
   },
   plugins: [],

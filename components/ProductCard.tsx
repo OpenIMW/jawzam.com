@@ -24,7 +24,7 @@ export default function ProductCard({
         width={422}
         alt={name}
       />
-      <div className="z-10 -mt-0.5 flex h-full w-full flex-col items-center gap-4 border-x border-b border-primary/20 bg-neutral-50 px-4 py-6 text-center">
+      <div className="z-10 -mt-0.5 flex h-full w-full flex-col items-center gap-4 rounded-b border-x border-b border-secondary/30 bg-white px-4 py-6 text-center">
         <h2 className="text-2xl font-bold text-secondary">{name}</h2>
         {description && (
           <p className="flex-grow text-secondary/80">{description}</p>
@@ -41,8 +41,10 @@ export default function ProductCard({
             </i>
           </span>
         </p>
-        <button className="mt-6 w-full rounded-lg border-2 border-dashed border-primary bg-white py-2 px-4 font-bold uppercase text-primary transition duration-300 ease-in-out hover:bg-primary hover:text-white">
-          Ajouter au panier
+        <button className="mt-6 w-full rounded-lg border-primary bg-secondary py-2 px-4 font-bold uppercase shadow-xl transition duration-300 ease-in-out hover:scale-105 focus-visible:outline-primary">
+          <span className="bg-primary bg-clip-text text-transparent">
+            Ajouter au panier
+          </span>
         </button>
       </div>
     </div>

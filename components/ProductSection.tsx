@@ -12,7 +12,7 @@ export default function ProductSection({
   featuredProduct,
 }: ProductSectionProps) {
   return (
-    <section className="container py-16">
+    <section className="container py-12 sm:py-32">
       <div className="grid gap-2 sm:grid-cols-2 md:grid-cols-4">
         {products.map((p) => (
           <ProductCard
@@ -22,7 +22,7 @@ export default function ProductSection({
         ))}
       </div>
       <FeaturedProduct
-        className="mt-24 shadow-2xl shadow-primary/25"
+        className="mt-20 shadow-2xl shadow-secondary/25 sm:mt-32 md:mt-52"
         {...featuredProduct}
       />
     </section>

@@ -17,7 +17,7 @@ export default function FeaturedProduct({
   return (
     <div
       className={classNames(
-        "flex flex-col border border-dashed border-primary bg-primary/10 sm:flex-row",
+        "flex flex-col rounded-md border-4 border-dashed border-primary bg-secondary sm:flex-row",
         className
       )}
     >
@@ -29,22 +29,24 @@ export default function FeaturedProduct({
           alt={name}
         />
       </div>
-      <div className="z-10 -mt-0.5 flex h-full flex-1 flex-col items-center gap-4 border-t border-primary/5 px-4 py-6 text-center sm:border-l md:px-16">
-        <h2 className="text-3xl font-black text-secondary">{name}</h2>
-        <p className="flex-grow text-secondary/80">{description}</p>
-        <p className="rounded-md bg-amber-200/5 py-2 px-4">
-          <span className="text-3xl font-bold text-secondary">
+      <div className="z-10 -mt-0.5 flex h-full flex-1 flex-col items-center gap-4 border-primary/5 px-4 py-12 text-center md:px-16">
+        <h2 className="bg-primary bg-clip-text text-3xl font-black text-transparent">
+          {name}
+        </h2>
+        <p className="flex-grow text-white">{description}</p>
+        <p className="py-2">
+          <span className="bg-primary bg-clip-text text-3xl font-bold text-transparent">
             {price}&euro;
           </span>
           &nbsp;
-          <span className="text-lg font-bold text-secondary">
+          <span className="bg-primary bg-clip-text text-lg font-bold text-transparent">
             / Box{" "}
-            <i className="text-sm font-normal text-gray-500">
+            <i className="text-sm font-normal text-neutral-100">
               (12pieces ~ 1Kg)
             </i>
           </span>
         </p>
-        <button className="mt-6 rounded-lg border-2 border-dashed border-primary bg-white px-12 py-2 font-bold uppercase text-primary transition duration-300 ease-in-out hover:bg-primary hover:text-white  md:px-24">
+        <button className="mt-6 rounded-lg border bg-primary px-12 py-2 text-xl font-black uppercase text-secondary shadow-2xl transition duration-300 ease-in-out hover:scale-105 md:px-24">
           Ajouter au panier
         </button>
       </div>

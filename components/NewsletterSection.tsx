@@ -26,7 +26,7 @@ export default function NewsletterSection(props: NewsletterSectionProps) {
           />
         </div>
         <div className="flex flex-col gap-4 px-4 text-neutral-900 md:px-12">
-          <h2 className="text-3xl font-bold text-primary">
+          <h2 className="bg-primary bg-clip-text text-3xl font-bold text-transparent">
             {props.newsletterBannerTitle}
           </h2>
           <p className="text-gray-200">{props.newsletterBannerSentence}</p>

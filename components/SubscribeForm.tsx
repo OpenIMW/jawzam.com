@@ -8,7 +8,7 @@ export default function SubscribeForm() {
         Search
       </label>
       <div className="relative">
-        <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3 text-primary">
+        <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3 text-secondary">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -26,15 +26,17 @@ export default function SubscribeForm() {
         <input
           type="search"
           id="default-search"
-          className="block w-full rounded-lg border-2 border-dashed border-primary bg-white/80 p-4 pl-10 text-sm text-gray-900 focus:border-primary focus:bg-white focus:ring-primary focus-visible:outline-dashed focus-visible:outline-primary"
+          className="block w-full rounded-lg border-2 border-dashed border-secondary bg-gray-50 p-4 pl-10 text-sm text-gray-900 focus:border-primary focus:bg-white focus:ring-primary focus-visible:outline-dashed focus-visible:outline-secondary"
           placeholder="email@example.com"
           required
         />
         <button
           type="submit"
-          className="absolute right-2.5 bottom-2.5 rounded-lg bg-primary/80 px-4 py-2 text-sm font-bold text-neutral-800 hover:bg-primary focus:outline-none focus:ring-4 focus:ring-secondary dark:hover:bg-primary md:px-6"
+          className="absolute right-2.5 bottom-2.5 rounded-lg bg-secondary px-4 py-2 text-sm font-bold text-neutral-800 transition-transform duration-300 ease-in-out hover:scale-105 focus:outline-none focus:ring-4 focus:ring-secondary md:px-6"
         >
-          {"S'abonner"}
+          <span className="bg-primary bg-clip-text text-transparent">
+            {"S'abonner"}
+          </span>
         </button>
       </div>
     </form>

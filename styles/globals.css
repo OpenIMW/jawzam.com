@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.bg-primary {
+  @apply bg-gradient-to-r from-yellow-200 to-yellow-500;
+}

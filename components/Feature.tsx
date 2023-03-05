@@ -30,8 +30,10 @@ export default function Feature({
         {...props}
       />
       <div className="flex flex-col gap-2 px-4 sm:px-12 md:px-16">
-        <h2 className="text-2xl font-bold text-primary">{title}</h2>
-        <p className="text-gray-200">{description}</p>
+        <h2 className="text-2xl font-bold text-white text-transparent">
+          {title}
+        </h2>
+        <p className="text-gray-300">{description}</p>
       </div>
     </div>
   );

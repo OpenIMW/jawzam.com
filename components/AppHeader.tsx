@@ -18,7 +18,14 @@ import LinkIcon from "./LinkIcon";
 export default function AppHeader() {
   const [navbarMenuOpen, setNavbarMenuOpen] = useState(false);
   return (
-    <header className="fixed top-0 z-20 h-14 w-full overflow-visible bg-white/80 shadow backdrop-blur-md md:h-[82px]">
+    <header
+      className={classNames(
+        "fixed top-0 z-20 h-14 w-full overflow-visible bg-white/80 shadow backdrop-blur-md md:h-[82px]",
+        {
+          shadow: false,
+        }
+      )}
+    >
       <nav className="relative flex h-full items-center justify-between md:container md:gap-4 lg:gap-12">
         <Link
           href="/"
@@ -26,10 +33,10 @@ export default function AppHeader() {
         >
           <Image
             className="h-full w-auto"
-            src="/logo.svg"
+            src="/logo-text.svg"
             alt="Jawzam.com"
-            width={717}
-            height={664}
+            width={168}
+            height={166}
           />
         </Link>
         <button
@@ -38,7 +45,7 @@ export default function AppHeader() {
         >
           <span
             className={classNames(
-              "ease h-1 w-6 transform rounded-full bg-primary transition-transform duration-300 ease-in-out",
+              "ease h-1 w-6 transform rounded-full bg-secondary transition-transform duration-300 ease-in-out",
               {
                 "translate-y-2 rotate-45 opacity-80 group-hover:opacity-100":
                   navbarMenuOpen,
@@ -48,7 +55,7 @@ export default function AppHeader() {
           ></span>
           <span
             className={classNames(
-              "ease h-1 w-6 transform rounded-full bg-primary transition-transform duration-300 ease-in-out",
+              "ease h-1 w-6 transform rounded-full bg-secondary transition-transform duration-300 ease-in-out",
               {
                 "opacity-0": navbarMenuOpen,
                 "opacity-80 group-hover:opacity-100": !navbarMenuOpen,
@@ -57,7 +64,7 @@ export default function AppHeader() {
           ></span>
           <span
             className={classNames(
-              "ease h-1 w-6 transform rounded-full bg-primary transition-transform duration-300 ease-in-out",
+              "ease h-1 w-6 transform rounded-full bg-secondary transition-transform duration-300 ease-in-out",
               {
                 "-translate-y-2 -rotate-45 opacity-80 group-hover:opacity-100":
                   navbarMenuOpen,

@@ -11,25 +11,25 @@ import LinkIcon from "./LinkIcon";
 export default function AppFooter() {
   return (
     <footer className="container flex flex-col items-center justify-between gap-6 pb-10 md:grid-cols-2 md:flex-row">
-      <div className="flex flex-col items-center justify-center gap-2 sm:flex-row md:justify-start">
+      <div className="flex flex-col items-center justify-center gap-4 md:justify-start">
         <Link
           href="/"
-          className="relative z-10 sm:self-start md:ml-0"
+          className="relative z-10 md:ml-0"
         >
           <Image
-            className="h-auto w-40"
+            className="h-auto w-44"
             src="/logo.svg"
             alt="Jawzam.com"
-            width={717}
-            height={664}
+            width={368}
+            height={262}
           />
         </Link>
-        <ul className="flex items-center justify-end gap-6 px-4 pt-5 text-primary md:justify-self-end">
+        <ul className="flex items-center justify-end gap-6 px-4 text-secondary opacity-90 md:justify-self-end">
           <li className="flex items-center justify-center">
             <LinkIcon
               href="tel:+33634573653"
               icon={faPhone}
-              size={32}
+              size={24}
             >
               Appelez-nous au +33634573653
             </LinkIcon>
@@ -38,7 +38,7 @@ export default function AppFooter() {
             <LinkIcon
               href="/facebook-messenger"
               icon={faFacebookMessenger}
-              size={32}
+              size={24}
             >
               Contactez-nous via Facebook Messenger
             </LinkIcon>
@@ -47,7 +47,7 @@ export default function AppFooter() {
             <LinkIcon
               href="/whatsapp"
               icon={faWhatsapp}
-              size={32}
+              size={24}
             >
               Contactez-nous via WhatsApp
             </LinkIcon>
@@ -56,7 +56,7 @@ export default function AppFooter() {
             <LinkIcon
               href="mailto:contact@jawzam.com"
               icon={faEnvelope}
-              size={32}
+              size={24}
             >
               Contactez-nous via e-mail
             </LinkIcon>
